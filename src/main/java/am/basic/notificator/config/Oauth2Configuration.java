@@ -32,6 +32,15 @@ public class Oauth2Configuration extends ResourceServerConfigurerAdapter {
         return defaultTokenServices;
     }
 
+    /*@Bean
+    public ResourceServerTokenServices tokenService() {
+        RemoteTokenServices tokenServices = new RemoteTokenServices();
+        tokenServices.setClientId("sample_test_client_app");
+        tokenServices.setClientSecret("secret");
+        tokenServices.setCheckTokenEndpointUrl("http://localhost:8080/oauth/check_token");
+        return tokenServices;
+    }
+    */
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http

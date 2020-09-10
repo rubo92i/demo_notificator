@@ -59,11 +59,20 @@
         </dependency>
 
         <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>4.0.38</version>
+        </dependency>
+
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>8.0</version>
         </dependency>
     </dependencies>
+
+
+
 
     <build>
         <plugins>
