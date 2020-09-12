@@ -9,14 +9,6 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @Configuration
 public class RemoteConfig {
 
-    @Value("${spring.ws.oauth.url}")
-    private String oauthUrl;
-
-    @Value("${spring.ws.oauth.username}")
-    private String oauthUsername;
-
-    @Value("${spring.ws.oauth.password}")
-    private String oauthPassword;
 
 
     @Value("${spring.ws.oauth.http.url}")
@@ -32,16 +24,5 @@ public class RemoteConfig {
         return (TokenStore) invoker.getObject();
     }
 
-    /* @Bean
-    public TokenStore tokenStore() {
-         HessianProxyFactoryBean invoker = new HessianProxyFactoryBean();
-        invoker.setServiceUrl(oauthUrl);
-        invoker.setServiceInterface(TokenStore.class);
-        invoker.setHessian2(true);
-        invoker.setUsername(oauthUsername);
-        invoker.setPassword(oauthPassword);
-        invoker.afterPropertiesSet();
-        return (TokenStore) invoker.getObject();
-    }*/
 
 }
